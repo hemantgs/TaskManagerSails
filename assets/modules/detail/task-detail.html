@@ -1,0 +1,67 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading"> <strong class="panel-title">Task Detail Page for {{taskDetail.task}}</strong></div>
+            <div class="panel-body">
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <label for="dueDate">Start Date     </label>
+                        <input type="time" id="dueDate" class="taskDate" ng-model="startTime" />
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="dueDate">End Date</label>
+                        <input type="time" id="dueDate" class="taskDate" ng-model="endTime" />
+                    </div>
+
+                    <button class="btn btn-primary" ng-disabled="!endTime || !startTime" ng-hide="editMode" ng-click="addDuration()">Add Duration</button>
+                    <!--<button type="btn btn-primary" class="btn btn-primary"
+                        ng-disabled="!todoName" ng-show="editMode"
+                        ng-click="updateTodo(todoName)">Save</button>
+                <button type="btn btn-primary" class="btn btn-primary" ng-click="resetTodoField()">Reset</button>-->
+                </div>
+
+
+                <br>
+                <!-- <input type="date" id="dueDate" class="taskDate" ng-model="startData">
+
+          <label for="dueDate">Due Date</label>-->
+
+
+                <div class="alert alert-info" ng-show="taskDetail.taskdetails.length == 0">
+                    No todos found
+                </div>
+                <table class="table table-bordered table-hover" ng-show="taskDetail.taskdetails.length > 0">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center;width: 25px;">Task</th>
+                            <th style="text-align: center; width: 25px;">Start Date</th>
+                            <th style="text-align: center; width: 25px;">End Date</th>
+                            <th style="text-align: center; width: 25px;">Duration</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="task in taskDetail.taskdetails">
+                            <td>{{taskDetail.task}}</td>
+                            <td>
+                                {{task.startTime | date:'HH:mm' }}
+                            </td>
+                            <td>
+                                {{task.endTime | date:'HH:mm'}}
+                            </td>
+                            <td>
+                                {{task.durGap}}
+                            </td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

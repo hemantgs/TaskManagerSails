@@ -1,0 +1,14 @@
+<div>
+
+    <h2>DashBoard</h2>
+</div>
+<div class="container">
+    <div class="form-group">
+        <label for="sel1">Select Task:</label>
+        <div class="row">
+            <select class="form-control col-sm-8" ng-model="selectedTask" ng-options="item.taskName for item in todos" ng-change="buildGraphData()">
+
+    </select></div>
+    </div>
+</div>
+<nvd3 options="options" data="data"></nvd3>

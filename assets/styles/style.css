@@ -1,0 +1,22 @@
+.logo{
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+    
+}
+.rule{
+    height: 0.51px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+.panel-primary > .panel-heading{
+    background-color: #03111d;
+    border-color: #01070c;
+}
+
+.panel{
+border-color:black;
+
+}

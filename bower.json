@@ -1,0 +1,26 @@
+{
+  "name": "taskmanager",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "anonymous node/sails user"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": null,
+    "angular-moment": null,
+    "angular-route": null,
+    "angular": null,
+    "angular-mocks": null,
+    "jquery": null,
+    "bootstrap": null
+  }
+}
